@@ -53,8 +53,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero{background:var(--band);color:var(--band-fg);padding-block:72px 64px;border-bottom:1px solid var(--line)}
 .hero .eyebrow{color:var(--band-accent)}
 .hero h1{font-size:clamp(34px,6.2vw,72px);line-height:1.25;margin-top:20px;font-weight:700;max-width:14em}
-.hero h1 em{font-style:normal;color:var(--accent);background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 94%/0 .07em;animation:sweep .9s .9s cubic-bezier(.3,.7,.2,1) forwards}
-@keyframes sweep{to{background-size:100% .07em}}
+.hero h1 em{font-style:normal;color:var(--accent)}
 .hero p.lead{max-width:34em;font-size:clamp(16px,1.6vw,19px);color:var(--band-muted);margin:24px 0 0}
 .rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) backwards}
 .rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.3s}
@@ -201,8 +200,7 @@ footer{padding-block:24px 88px;font-size:13px;color:var(--muted)}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .rise,.hero h1 em,.cut i{animation:none}
-  .hero h1 em{background-size:100% .07em}
+  .rise,.cut i{animation:none}
   .card,.hv,.tile,.tile .logo,.card .thumb img{transition:none}
 }
 </style>
