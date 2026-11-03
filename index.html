@@ -14,15 +14,19 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="preload" href="assets/fonts/kbiz-b.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pretendard-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pretendard-bold.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'KBIZ Myungjo B';src:url(assets/fonts/kbiz-b.woff2) format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Pretendard';src:url(assets/fonts/pretendard-regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pretendard';src:url(assets/fonts/pretendard-medium.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Pretendard';src:url(assets/fonts/pretendard-bold.woff2) format('woff2');font-weight:600 700;font-display:swap}
 /* Layout: light hero with the thesis and four figures, then a filterable project grid (two featured cards) whose cards open a detail dialog, then profile, tools, contact. */
 :root{
   --bg:#FBFAF7; --surface:#FFFFFF; --fg:#14213D; --muted:#4A5670; --line:#D9DCE3;
   --accent:#2F6FD0; --accent-ink:#1F55A8; --band:#ECF1F8; --band-fg:#14213D; --band-muted:#4A5670; --band-accent:#1F55A8; --chip:#ECF1F8;
-  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --serif:'KBIZ Myungjo B','Nanum Myeongjo',serif; --sans:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
   --on-accent:#FFFFFF;
   color-scheme:light;
 }
@@ -278,12 +282,12 @@ var P=[
 {id:"busan",cat:"analysis",tag:"수집·분석·보고",title:"부산시 온라인 여론 모니터링",meta:"2025.03 ~ 2026.05 · 데이터 수집·분석 및 보고서 작성",line:"부산시 온라인 여론 모니터링 용역에서 데이터 분석 및 보고서 작성 실무를 맡았습니다.\n\n데이터 수집 및 분석 업무를 효율화했습니다.",feat:"bh",featAlt:"부산광역시청 전경과 부산광역시 로고",
  ctx:"개발 인력이 부족한 상황에서 발주처의 추가 요청이 이어져 솔루션 업데이트가 지연되고 있었습니다. 납기를 늦출 수 없어 DB에서 원시 데이터를 직접 추출해 썼는데, 정규식 중심의 비효율적인 정제 탓에 매일 수행하는 수집·분석 업무가 원활하지 못했습니다.",
  act:"하루 400만 건 이상 수집되는 전체 데이터에 새 파이프라인을 구축하기는 어렵지만, 발주처가 요구하는 시정 관련 여론 데이터만 추출해 새로운 방식을 먼저 도입하는 것은 가능하다고 판단했습니다. 개발팀과 협력해 부산시 관련 콘텐츠만 자동 추출하는 알고리즘을 구성하고, 전용 크롤러를 바이브코딩으로 개발해 업무를 자동화·효율화했습니다.",
- res:["솔루션 개발 전에도 납기를 준수했고, 일일 수집 업무 시간을 2시간에서 15분으로 단축", "일일·주간·이슈 보고서 241건(일일 177·주간 52·이슈 12, 2026.01.31 기준) 작성. 현안 분석으로 해양수산부 이전(17만 5천여 건), 가덕도신공항(2만 9천여 건)을 다룸", "해양수산부 이전 여론에서 찬성·환영 속에 실질적 지역 혜택에 대한 의문과 이전 공무원 우대(아파트 우선 입주권 등)의 형평성 논란이 상당수 확인되어 잠재 리스크로 보고함", "능력을 인정받아 맞춤형 솔루션 개발의 기획 실무를 담당했고, 2개월 연장 계약과 2년 연속 수주에 기여함"],
+ res:["솔루션 개발 전에도 납기를 준수했고, 일일 수집 업무 시간을 2시간에서 15분으로 단축", "일일·주간·이슈 보고서 241건(일일 177·주간 52·이슈 12, 2026.01.31 기준) 작성. 현안 분석으로 해양수산부 이전(17만 5천여 건), 가덕도신공항(2만 9천여 건)을 다룸", "해양수산부 이전 여론에서 찬성 의견 속의 지역 혜택 의문과 공무원 우대 형평성 논란을 찾아 잠재 리스크로 보고했습니다.", "능력을 인정받아 맞춤형 솔루션 개발의 기획 실무를 담당했고, 2개월 연장 계약과 2년 연속 수주에 기여함"],
  gal:[["bs1","비정기 심층보고서"],["bs2","보고서 본문"],["bs3","다른 호 보고서"]],mask:true},
 {id:"joongang",cat:"analysis",tag:"텍스트 분석",title:"중앙일보 〈김정은 연구〉",meta:"2025.12 ~ 2026.03 · 분석·보고서 담당",line:"10년치 노동신문 전문과 김정은 국무위원장의 연설문을 분석해 중앙일보 〈김정은 연구〉 시리즈 기사 3건에 인용되었습니다.",feat:"jc1",featAlt:"중앙일보 〈김정은 연구〉 기사 화면",
  ctx:"개발팀장과 저로 프로젝트팀을 꾸려, 해외 북한 정보 업체의 라이선스 데이터를 수집하고 ClickHouse로 분석했습니다. 연재를 맡은 중앙일보 외교안보부 기자들은 북한 전문가였지만 데이터를 다루는 데는 낯설었고, 개발팀은 외교·안보 분야의 요청을 처음 접했습니다.",
  act:"데이터 실무 경험과 전공 지식을 살려 격주 미팅에서 분석 보고서를 발표하고 설명했으며, 사업 책임자들 사이의 소통도 맡았습니다. 하노이 회담 결렬 이후 김정은의 행보가 달라졌는지 가설을 검증해 달라는 요청에 맞춰, 북한식 조어(造語)와 조선어사전 DB 등으로 사용자 사전을 먼저 구축해 분석이 원활하게 진행되도록 했습니다.",
- res:["회사가 다뤄 본 적 없는 새 데이터였지만 2개월 만에 모든 분석 의뢰를 완료", "API로 제공받은 노동신문 10년 치 전문(문건·단신 포함) 약 800만 건을 8개 범주로 분류·분석하고 분석 보고서를 5차까지 작성", "가설 검증: 핵·군사 언급 증가는 확인되지 않았고, 내부 통제·규율 강화 수사는 크게 늘었음. 가설 밖 발견으로 '백두혈통' 언급이 크게 줄어 김정은 개인 숭배 체제 구축 의도를 읽어냄", "분석 인사이트가 중앙일보 〈김정은 연구〉 시리즈 기사 3건(2026.03)에 직접 인용됨"],
+ res:["회사가 다뤄 본 적 없는 새 데이터였지만 2개월 만에 모든 분석 의뢰를 완료", "API로 제공받은 노동신문 10년 치 전문(문건·단신 포함) 약 800만 건을 8개 범주로 분류·분석하고 분석 보고서를 5차까지 작성", "노동신문 약 800만 건으로 \'하노이 회담 이후 자력갱생 전환\' 가설을 검증했고, 내부 통제 수사 증가와 \'백두혈통\' 언급 감소를 확인했습니다.", "분석 인사이트가 중앙일보 〈김정은 연구〉 시리즈 기사 3건(2026.03)에 직접 인용됨"],
  gal:[["jc1","중앙일보 기사 1"],["jc2","중앙일보 기사 2"],["jc3","중앙일보 기사 3"]]},
 {id:"broadcast",cat:"analysis",tag:"텍스트 분석",title:"YTN·KBS 대선 개표방송 데이터 분석",meta:"2025.03 ~ 2025.05 · 분석·보고서 담당",line:"개표방송 코너 두 곳의 후보 발언 분석을 맡았습니다.",thumb:"ytc",
  ctx:"대선 개표방송의 데이터 코너에 쓸 후보 발언과 소셜 데이터 분석이 필요했습니다. 방송 일정이 정해져 있어 납기를 늦출 수 없었습니다.",
